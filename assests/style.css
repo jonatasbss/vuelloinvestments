@@ -1,0 +1,100 @@
+body.wrapper {
+    margin: 0;
+    padding: 0;
+    background-image: url(images/tessa-wilson-MTSILZYVcdw-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Overlay */
+
+body.wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.home-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.home-search h1 {
+    color: #EDF0F0;
+    font-weight: bold;
+    font-size: 4.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.home-search .underline{
+    text-decoration: underline solid #FFB945
+}
+
+.home-search .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-search .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-search .search .input-group{
+    max-width: 50%;
+}
+
+.input-group input{
+    height: 3em;
+}
+
+/* Visualização para celular */
+
+@media screen and (max-width: 768px) {
+    body.wrapper {
+        height: 100vh;
+        background-position: -10em;
+    }
+
+    .home-search h1{
+        font-size: 2.5em;
+        text-align: left;
+    }
+
+    .home-search .search .input-group{
+        max-width: 100%;
+    }
+
+}
+
+.nav-link{
+    color: #EDF0F0;
+
+}
+
+.nav-link:hover{
+    color: #EDF0F0;
+
+}
+
+.nav-pills .nav-link.active {
+    color: #EDF0F0;
+    background-color: #FFB945;
+    font-weight: bold
+}
